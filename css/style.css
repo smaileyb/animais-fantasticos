@@ -1,0 +1,12 @@
+/* GLOBAL */
+@import "./global.css";
+/* HEADER */
+@import "./header.css";
+/* ANIMAIS */
+@import "./animais.css";
+/* FAQ */
+@import "./faq.css";
+/* CONTATO */
+@import "./contato.css";
+/* FOOTER */
+@import "./footer.css";
