@@ -28,6 +28,15 @@
   grid-column: 2;
 }
 
+.animais-lista li {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.animais-lista li:hover {
+  transform: scale(0.99);
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -53,5 +62,28 @@
 @media (max-width: 700px) {
   .animais-lista {
     grid-column: 1;
+  }
+}
+
+.js .js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.ativo {
+  display: block;
+  animation: show 0.5s forwards;
+}
+
+/* animação */
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
