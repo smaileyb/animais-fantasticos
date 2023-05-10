@@ -65,21 +65,43 @@
   }
 }
 
-.js .js-tabcontent section {
+.js [data-tab="content"] section {
   display: none;
 }
 
-.js-tabcontent section.ativo {
+[data-tab="content"] section.ativo {
   display: block;
-  animation: show 0.5s forwards;
+
 }
+
+[data-tab="content"] section.ativo.show-right {
+  animation: show-right 0.5s forwards;
+}
+
+[data-tab="content"] section.ativo.show-down {
+  animation: show-down 0.5s forwards;
+}
+
+
 
 /* animação */
 
-@keyframes show {
+@keyframes show-right {
   from {
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
   }
 
   to {
