@@ -11,4 +11,6 @@
 /* FOOTER */
 @import "./footer.css";
 /* MODAL */
-@import "./modal.css"
+@import "./modal.css";
+/* TOOLTIP */
+@import "./tooltip.css";

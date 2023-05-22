@@ -3,6 +3,7 @@ import iniciarAccordion from "./modules/menu-accordion.js"
 import iniciarScrollSuave from "./modules/scroll-suave.js"
 import animacaoScroll from "./modules/animacao-scroll.js"
 import iniciarModal from "./modules/modal.js"
+import iniciarTooltip from './modules/tooltip.js';
 
 // NAVEGAÇÃO POR TABS
 iniciarNavTab()
@@ -18,3 +19,6 @@ animacaoScroll()
 
 //MODAL
 iniciarModal()
+
+//TOOLTIP
+iniciarTooltip()

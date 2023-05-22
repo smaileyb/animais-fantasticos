@@ -20,5 +20,3 @@ export default function iniciarModal() {
     modalContainer.addEventListener("click", cliqueForaModal)
   }
 }
-
-
