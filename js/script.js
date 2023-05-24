@@ -5,6 +5,7 @@ import animacaoScroll from "./modules/animacao-scroll.js"
 import iniciarModal from "./modules/modal.js"
 import iniciarTooltip from './modules/tooltip.js';
 import iniciarDropDownMenu from './modules/dropdown-menu.js';
+import iniciarMenuMobile from "./modules/menu-mobile.js"
 
 // NAVEGAÇÃO POR TABS
 iniciarNavTab()
@@ -20,3 +21,5 @@ iniciarModal()
 iniciarTooltip()
 //DROPDOWN MENU
 iniciarDropDownMenu()
+//MENU MOBILE
+iniciarMenuMobile()
