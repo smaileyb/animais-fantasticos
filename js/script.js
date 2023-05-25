@@ -7,6 +7,7 @@ import iniciarTooltip from './modules/tooltip.js';
 import iniciarDropDownMenu from './modules/dropdown-menu.js';
 import iniciarMenuMobile from "./modules/menu-mobile.js"
 import iniciaAnimaNumeros from "./modules/anima-numeros.js"
+import iniciarHorarioFuncionamento from "./modules/horario-funcionamento.js"
 
 // NAVEGAÇÃO POR TABS
 iniciarNavTab()
@@ -26,3 +27,5 @@ iniciarDropDownMenu()
 iniciarMenuMobile()
 //NUMEROS
 iniciaAnimaNumeros()
+//HORÁRIO DE FUNCIONAMENTO
+iniciarHorarioFuncionamento()
