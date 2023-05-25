@@ -9,7 +9,7 @@ export default function animacaoScroll() {
         const telaEstaVisível = (sectionTop - windowMetade) < 0
         if (telaEstaVisível) {
           section.classList.add("ativo")
-        } else {
+        } else if (section.classList.contains("ativo")) {
           section.classList.remove("ativo")
         }
       })

@@ -6,6 +6,7 @@ import iniciarModal from "./modules/modal.js"
 import iniciarTooltip from './modules/tooltip.js';
 import iniciarDropDownMenu from './modules/dropdown-menu.js';
 import iniciarMenuMobile from "./modules/menu-mobile.js"
+import iniciaAnimaNumeros from "./modules/anima-numeros.js"
 
 // NAVEGAÇÃO POR TABS
 iniciarNavTab()
@@ -23,3 +24,5 @@ iniciarTooltip()
 iniciarDropDownMenu()
 //MENU MOBILE
 iniciarMenuMobile()
+//NUMEROS
+iniciaAnimaNumeros()
