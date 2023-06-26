@@ -30,6 +30,7 @@ export default class iniciarNavTab {
       // inserindo eventos para ativar demais itens
       this.addTabNavEvent()
     }
+    return this
   }
 
 
