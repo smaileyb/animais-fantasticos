@@ -1,4 +1,4 @@
-import iniciaAnimaNumeros from "./anima-numeros.js"
+import AnimaNumeros from "./anima-numeros.js"
 
 export default function iniciarFetchAnimais() {
   async function fetchAnimais(url) {
@@ -11,7 +11,9 @@ export default function iniciarFetchAnimais() {
         const divAnimais = createAnimal(animal)
         secaoNumeros.appendChild(divAnimais)
       })
-      iniciaAnimaNumeros()
+      // iniciando anima números
+      const animaNumeros = new AnimaNumeros("[data-numero]", "ativo", ".numeros")
+      animaNumeros.init()
 
     } catch (erro) {
       console.log(erro)
