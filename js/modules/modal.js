@@ -1,27 +1,41 @@
-export default function iniciarModal() {
-  const botaoAbrir = document.querySelector("[data-modal='abrir']")
-  const botaoFechar = document.querySelector("[data-modal='fechar']")
-  const modalContainer = document.querySelector("[data-modal='container']")
+export default class iniciarModal {
+  constructor(abrir, fechar, container) {
+    this.botaoAbrir = document.querySelector(abrir)
+    this.botaoFechar = document.querySelector(fechar)
+    this.modalContainer = document.querySelector(container)
+    this.activeClass = "ativo"
 
-  if (botaoAbrir && botaoFechar && modalContainer) {
+    this.cliqueForaModal = this.cliqueForaModal.bind(this)
 
-    function toggleModal(event) {
-      event.preventDefault()
-      modalContainer.classList.toggle("ativo")
+  }
+  // abre ou fecha o modal
+  toggleModal(event) {
+    this.modalContainer.classList.toggle(this.activeClass)
+  }
+  // adiciona o evento de toggle ao modal
+  eventToggleModal(event) {
+    event.preventDefault()
+    this.toggleModal(event)
+  }
+  fecharModal() {
+    this.modalContainer.classList.remove(this.activeClass)
+  }
+  // fecha modal quando clica fora
+  cliqueForaModal(event) {
+    if (event.target === this.modalContainer)
+      this.fecharModal()
+  }
+  // adiciona os eventos
+  addModalEvents() {
+    this.botaoAbrir.addEventListener("click", (event) => this.eventToggleModal(event))
+    this.botaoFechar.addEventListener("click", (event) => this.eventToggleModal(event))
+    this.modalContainer.addEventListener("click", this.cliqueForaModal)
+  }
+  // inicia a classe
+  init() {
+    if (this.botaoAbrir && this.botaoFechar && this.modalContainer) {
+      this.addModalEvents()
     }
-
-    function fecharModal() {
-      modalContainer.classList.remove("ativo")
-    }
-
-    function cliqueForaModal(event) {
-      /* como a função está sendo executada dentro do escutador de eventos colocado no MediaElementAudioSourceNode, o this é o próprio elemento, assim, quando conferimos se event.target, isto é, o local exato onde foi feito o clique é exatamente igual ao this, conseguimos fazer com que somente os cliques fora do modal também fechem ele */
-      if (event.target === this)
-        fecharModal()
-    }
-
-    botaoAbrir.addEventListener("click", toggleModal)
-    botaoFechar.addEventListener("click", toggleModal)
-    modalContainer.addEventListener("click", cliqueForaModal)
+    return this
   }
 }
