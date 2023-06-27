@@ -26,13 +26,14 @@ export default class AnimaNumeros {
   animaNumeros() {
     this.numeros.forEach(numero => this.constructor.incrementarNumero(numero))
   }
-
+  // função que ocorre quando a mutação se verificar
   handleMutation(mutation) {
     if (mutation[0].target.classList.contains(this.observerClass)) {
       this.observador.disconnect()
       this.animaNumeros()
     }
   }
+  // adiciona o MutationObserver para verificar quando a classe ativo é adicionada ao elemento target
   addMutationObserver() {
     //COLOCANDO UM OBSERVADOR PARA VERIFICAR MUDANÇAS NESTA SECTION, DE MODO QUE A ANIMAÇÃO ACONTEÇA APENAS QUANDO ELA RECEBER A CLASSE .ativo DO SCRIPT animacao-scroll.js
     this.observador = new MutationObserver(this.handleMutation)
