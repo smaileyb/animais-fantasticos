@@ -6,7 +6,7 @@ import Tooltip from './modules/tooltip.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitcoin from "./modules/fetch-bitcoin.js"
 import AnimacaoScroll from "./modules/animacao-scroll.js"
-import iniciarDropDownMenu from './modules/dropdown-menu.js';
+import DropDownMenu from './modules/dropdown-menu.js';
 import iniciarMenuMobile from "./modules/menu-mobile.js"
 import iniciarHorarioFuncionamento from "./modules/horario-funcionamento.js"
 
@@ -33,9 +33,9 @@ fetchBitcoin("https://blockchain.info/ticker", ".btc-preco")
 //ANIMAÇÃO AO SCROLL
 const animaScroll = new AnimacaoScroll("[data-anime='scroll']")
 animaScroll.init()
-
 //DROPDOWN MENU
-iniciarDropDownMenu()
+const dropDownMenu = new DropDownMenu("[data-dropdown]")
+dropDownMenu.init()
 //MENU MOBILE
 iniciarMenuMobile()
 //HORÁRIO DE FUNCIONAMENTO
