@@ -7,7 +7,7 @@ import iniciarDropDownMenu from './modules/dropdown-menu.js';
 import iniciarMenuMobile from "./modules/menu-mobile.js"
 import iniciarHorarioFuncionamento from "./modules/horario-funcionamento.js"
 import fetchAnimais from './modules/fetch-animais.js';
-import iniciarFetchBitcoin from "./modules/fetch-bitcoin.js"
+import fetchBitcoin from "./modules/fetch-bitcoin.js"
 import animacaoScroll from "./modules/animacao-scroll.js"
 
 
@@ -28,13 +28,13 @@ const tooltip = new Tooltip('[data-tooltip')
 tooltip.init()
 //FETCH ANIMAIS DO JSON
 fetchAnimais("../../animaisapi.json", ".numeros-grid")
+//FETCH BITCOINS
+fetchBitcoin("https://blockchain.info/ticker", ".btc-preco")
 //DROPDOWN MENU
 iniciarDropDownMenu()
 //MENU MOBILE
 iniciarMenuMobile()
 //HORÁRIO DE FUNCIONAMENTO
 iniciarHorarioFuncionamento()
-//FETCH BITCOINS
-iniciarFetchBitcoin()
 //ANIMAÇÃO AO SCROLL  
 animacaoScroll()
