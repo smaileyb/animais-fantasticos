@@ -1,10 +1,12 @@
+import debounce from "./debounce-anima-scroll.js"
+
 export default class AnimacaoScroll {
   constructor(sectionsAnimados) {
     this.sectionsAnimados = document.querySelectorAll(sectionsAnimados)
     this.windowMetade = window.innerHeight * 0.6
 
     // bind
-    this.checkDistance = this.checkDistance.bind(this)
+    this.checkDistance = debounce(this.checkDistance.bind(this), 75)
 
   }
   // pega a distância de cada item em relação ao topo do site e salva em um objeto, utilizando-se da desestruturação para transformar a nodeList em um Array
