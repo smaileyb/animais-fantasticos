@@ -7,7 +7,7 @@ import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitcoin from "./modules/fetch-bitcoin.js"
 import AnimacaoScroll from "./modules/animacao-scroll.js"
 import DropDownMenu from './modules/dropdown-menu.js';
-import iniciarMenuMobile from "./modules/menu-mobile.js"
+import MenuMobile from "./modules/menu-mobile.js"
 import iniciarHorarioFuncionamento from "./modules/horario-funcionamento.js"
 
 
@@ -37,6 +37,7 @@ animaScroll.init()
 const dropDownMenu = new DropDownMenu("[data-dropdown]")
 dropDownMenu.init()
 //MENU MOBILE
-iniciarMenuMobile()
+const menuMobile = new MenuMobile("[data-menu='button']", "[data-menu='list']")
+menuMobile.init()
 //HORÁRIO DE FUNCIONAMENTO
 iniciarHorarioFuncionamento()
