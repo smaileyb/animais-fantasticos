@@ -3,12 +3,12 @@ import Accordion from "./modules/menu-accordion.js"
 import TabNav from "./modules/navegacao-tabs.js"
 import Modal from "./modules/modal.js"
 import Tooltip from './modules/tooltip.js';
+import fetchAnimais from './modules/fetch-animais.js';
+import fetchBitcoin from "./modules/fetch-bitcoin.js"
+import AnimacaoScroll from "./modules/animacao-scroll.js"
 import iniciarDropDownMenu from './modules/dropdown-menu.js';
 import iniciarMenuMobile from "./modules/menu-mobile.js"
 import iniciarHorarioFuncionamento from "./modules/horario-funcionamento.js"
-import fetchAnimais from './modules/fetch-animais.js';
-import fetchBitcoin from "./modules/fetch-bitcoin.js"
-import animacaoScroll from "./modules/animacao-scroll.js"
 
 
 // SCROLL SUAVE NO MENU INTERNO
@@ -30,11 +30,13 @@ tooltip.init()
 fetchAnimais("../../animaisapi.json", ".numeros-grid")
 //FETCH BITCOINS
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco")
+//ANIMAÇÃO AO SCROLL
+const animaScroll = new AnimacaoScroll("[data-anime='scroll']")
+animaScroll.init()
+
 //DROPDOWN MENU
 iniciarDropDownMenu()
 //MENU MOBILE
 iniciarMenuMobile()
 //HORÁRIO DE FUNCIONAMENTO
 iniciarHorarioFuncionamento()
-//ANIMAÇÃO AO SCROLL  
-animacaoScroll()
