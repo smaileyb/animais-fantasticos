@@ -8,7 +8,7 @@ import fetchBitcoin from "./modules/fetch-bitcoin.js"
 import AnimacaoScroll from "./modules/animacao-scroll.js"
 import DropDownMenu from './modules/dropdown-menu.js';
 import MenuMobile from "./modules/menu-mobile.js"
-import iniciarHorarioFuncionamento from "./modules/horario-funcionamento.js"
+import HorarioFuncionamento from "./modules/horario-funcionamento.js"
 
 
 // SCROLL SUAVE NO MENU INTERNO
@@ -40,4 +40,5 @@ dropDownMenu.init()
 const menuMobile = new MenuMobile("[data-menu='button']", "[data-menu='list']")
 menuMobile.init()
 //HORÁRIO DE FUNCIONAMENTO
-iniciarHorarioFuncionamento()
+const horarioFuncionamento = new HorarioFuncionamento("[data-semana")
+horarioFuncionamento.init()
