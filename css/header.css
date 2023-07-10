@@ -24,6 +24,13 @@
   letter-spacing: .1em;
 }
 
+.arrow-black{
+  background: url(../img/arrow-black.svg) no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+}
+
 @media (max-width: 700px) {
   .menu {
     grid-column: 1;
