@@ -9,6 +9,7 @@ import AnimacaoScroll from "./modules/animacao-scroll.js"
 import DropDownMenu from './modules/dropdown-menu.js';
 import MenuMobile from "./modules/menu-mobile.js"
 import HorarioFuncionamento from "./modules/horario-funcionamento.js"
+import SlideNav from "./modules/slide.js"
 
 
 // SCROLL SUAVE NO MENU INTERNO
@@ -42,3 +43,7 @@ menuMobile.init()
 //HORÁRIO DE FUNCIONAMENTO
 const horarioFuncionamento = new HorarioFuncionamento("[data-semana")
 horarioFuncionamento.init()
+//SLIDE
+const slide = new SlideNav(".slide", ".slide-wrapper")
+slide.init()
+slide.addControl(".custom-controls")
