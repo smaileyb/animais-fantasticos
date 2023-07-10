@@ -1,4 +1,4 @@
-import debounce from "./debounce-anima-scroll.js"
+import debounce from "./debounce.js"
 
 export default class AnimacaoScroll {
   constructor(sectionsAnimados) {
